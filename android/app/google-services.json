@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1011732479263",
+    "firebase_url": "https://shopkhanhtra.firebaseio.com",
+    "project_id": "shopkhanhtra",
+    "storage_bucket": "shopkhanhtra.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1011732479263:android:ea78c39ebcfe51b7afc42a",
+        "android_client_info": {
+          "package_name": "com.devk.shopkhanhtra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1011732479263-ajicdqogon3ocj602126bk05avij5a2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYg9Uy-o2ApkaexPHQEQSYgnmVUrXyfB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1011732479263-ajicdqogon3ocj602126bk05avij5a2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
