@@ -1,63 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:shopkhanhtra/demo_example.dart';
+import 'package:provider/provider.dart';
+import 'package:shopkhanhtra/total/const.dart';
+import 'package:shopkhanhtra/total/AppState.dart';
+import 'package:shopkhanhtra/chat/screen/login_screen.dart';
+import 'package:shopkhanhtra/chat/screen/home_screen.dart';
 void main() {
-  runApp(MyApp());
+  runApp(
+      MultiProvider(
+        providers: [
+          ChangeNotifierProvider(create: (_) => AppState()),
+        ],
+        child: MyApp(),
+      )
+  );
 }
-
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Shop Khánh Trà',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: themeColor,
       ),
-//      home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: DemoExample(),
-    );
-  }
-}
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ),
+      initialRoute: '/',
+      onGenerateRoute: (RouteSettings settings) {
+        print('DEVK route for ${settings.name}');
+        var routes = <String, WidgetBuilder>{
+          "/": (ctx) => LoginScreen(title: 'Shop Khánh Trà'),
+          "/home": (ctx) => HomeScreen(currentUserId: settings.arguments),
+        };
+        WidgetBuilder builder = routes[settings.name];
+        return MaterialPageRoute(builder: (ctx) => builder(ctx));
+      },
+      debugShowCheckedModeBanner: false,
     );
   }
 }
