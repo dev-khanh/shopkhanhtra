@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
-import 'package:shopkhanhtra/total/const.dart';
+import 'package:shopkhanhtra/base/const.dart';
 class FullPhoto extends StatelessWidget {
   final String url;
   FullPhoto({Key key, @required this.url}) : super(key: key);

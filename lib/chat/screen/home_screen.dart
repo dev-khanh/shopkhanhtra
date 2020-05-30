@@ -8,7 +8,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:shopkhanhtra/chat/screen/chat.dart';
 import 'package:shopkhanhtra/main.dart';
-import 'package:shopkhanhtra/total/const.dart';
+import 'package:shopkhanhtra/base/const.dart';
 import 'package:shopkhanhtra/chat/screen/settings.dart';
 import 'package:shopkhanhtra/chat/widget/loading.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';

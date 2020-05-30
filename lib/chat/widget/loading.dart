@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shopkhanhtra/total/const.dart';
+import 'package:shopkhanhtra/base/const.dart';
 class Loading extends StatelessWidget {
   const Loading();
   @override

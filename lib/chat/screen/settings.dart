@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:shopkhanhtra/total/const.dart';
+import 'package:shopkhanhtra/base/const.dart';
 class Settings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
