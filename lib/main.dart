@@ -2,10 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shopkhanhtra/base/const.dart';
 import 'package:shopkhanhtra/base/AppState.dart';
+import 'package:shopkhanhtra/card_images_instagram/images_instagram.dart';
 import 'package:shopkhanhtra/chat/screen/login_screen.dart';
 import 'package:shopkhanhtra/chat/screen/home_screen.dart';
 import 'package:shopkhanhtra/home/full_images.dart';
 import 'package:shopkhanhtra/home/main_screen.dart';
+import 'package:shopkhanhtra/showCard/home_page.dart';
+import 'package:shopkhanhtra/showCard/show_card.dart';
+import 'package:shopkhanhtra/ui/cook_details_page.dart';
+import 'package:shopkhanhtra/ui/list_recommen.dart';
+
+import 'led/text_led.dart';
 void main() {
   runApp(
       MultiProvider(
@@ -24,14 +31,20 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: themeColor,
       ),
-      initialRoute: '/',
+      initialRoute: '/listRecommen',
       onGenerateRoute: (RouteSettings settings) {
         print('DEVK route for ${settings.name}');
         var routes = <String, WidgetBuilder>{
           "/": (ctx) => MainScreen(),
           "/login": (ctx) => LoginScreen(title: 'Shop Khánh Trà'),
           "/home": (ctx) => HomeScreen(currentUserId: settings.arguments),
-          "/fullImages": (ctx) => Fullimages()
+          "/fullImages": (ctx) => Fullimages(),
+          "/imagesInstagram": (ctx) => ImagesInstagram(),
+          "/textLed": (ctx) => TextLed(),
+          '/ShowCard': (ctx) => ShowCard(),
+          '/homePage': (ctx) => HomePage(),
+          '/listRecommen': (ctx) => ListRecommen(),
+          '/cook_detailsPage': (ctx) => CookDetailsPage(settings.arguments),
         };
         WidgetBuilder builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder(ctx));

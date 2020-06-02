@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:shopkhanhtra/home/full_images.dart';
+
 
 final List<String> imgList = [
   'https://images.unsplash.com/photo-1520342868574-5fa3804e551c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=6ff92caffcdd63681a35134a6770ed3b&auto=format&fit=crop&w=1951&q=80',
@@ -67,45 +67,46 @@ class _CarouselWithIndicatorState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text('Main Screen')),
-      body: Column(
-        children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/fullImages');
-            },
-            child: CarouselSlider(
-              items: imageSliders,
-              options: CarouselOptions(
-                autoPlay: true,
-                enlargeCenterPage: true,
-                aspectRatio: 2.0,
-                onPageChanged: (index, reason) {
-                  setState(() {
-                    _current = index;
-                  });
-                },
-              ),
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: imgList.map((url) {
-              int index = imgList.indexOf(url);
-              return Container(
-                width: 8.0,
-                height: 8.0,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: _current == index
-                      ? Color.fromRGBO(0, 0, 0, 0.9)
-                      : Color.fromRGBO(0, 0, 0, 0.4),
-                ),
-              );
-            }).toList(),
-          ),
-        ],
-      ),
+//      body: Column(
+//        children: [
+//          GestureDetector(
+//            onTap: () {
+//              Navigator.pushNamed(context, '/fullImages');
+//            },
+//            child: CarouselSlider(
+//              items: imageSliders,
+//              options: CarouselOptions(
+//                autoPlay: true,
+//                enlargeCenterPage: true,
+//                aspectRatio: 2.0,
+//                onPageChanged: (index, reason) {
+//                  setState(() {
+//                    _current = index;
+//                  });
+//                },
+//              ),
+//            ),
+//          ),
+//          Row(
+//            mainAxisAlignment: MainAxisAlignment.center,
+//            children: imgList.map((url) {
+//              int index = imgList.indexOf(url);
+//              return Container(
+//                width: 8.0,
+//                height: 8.0,
+//                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
+//                decoration: BoxDecoration(
+//                  shape: BoxShape.circle,
+//                  color: _current == index
+//                      ? Color.fromRGBO(0, 0, 0, 0.9)
+//                      : Color.fromRGBO(0, 0, 0, 0.4),
+//                ),
+//              );
+//            }).toList(),
+//          ),
+//        ],
+//      ),
+        body: Text("ssssssss"),
     );
   }
 }
