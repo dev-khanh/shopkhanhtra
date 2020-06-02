@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:shopkhanhtra/bag/bag_page.dart';
 import 'package:shopkhanhtra/base/const.dart';
 import 'package:shopkhanhtra/base/AppState.dart';
 import 'package:shopkhanhtra/card_images_instagram/images_instagram.dart';
 import 'package:shopkhanhtra/chat/screen/login_screen.dart';
 import 'package:shopkhanhtra/chat/screen/home_screen.dart';
+import 'package:shopkhanhtra/flut_store/cart.dart';
+import 'package:shopkhanhtra/flut_store/details.dart';
+import 'package:shopkhanhtra/flut_store/fruit_app_home_page.dart';
 import 'package:shopkhanhtra/home/full_images.dart';
 import 'package:shopkhanhtra/home/main_screen.dart';
 import 'package:shopkhanhtra/showCard/home_page.dart';
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: themeColor,
       ),
-      initialRoute: '/listRecommen',
+      initialRoute: '/fruitAppHomePage',
       onGenerateRoute: (RouteSettings settings) {
         print('DEVK route for ${settings.name}');
         var routes = <String, WidgetBuilder>{
@@ -45,6 +49,10 @@ class MyApp extends StatelessWidget {
           '/homePage': (ctx) => HomePage(),
           '/listRecommen': (ctx) => ListRecommen(),
           '/cook_detailsPage': (ctx) => CookDetailsPage(settings.arguments),
+          '/bag': (ctx) => BagPage(),
+          '/fruitAppHomePage': (ctx) => FruitAppHomePage(),
+          '/card': (ctx) => FruitAppCartView(),
+          '/details': (ctx) => FruitAppFruitDetails(fruit: settings.arguments)
         };
         WidgetBuilder builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder(ctx));
