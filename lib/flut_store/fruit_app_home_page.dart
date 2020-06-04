@@ -65,7 +65,9 @@ class _FruitAppHomePageState extends State<FruitAppHomePage>
               IconButton(
                 // icon: Icon(FontAwesomeIcons.thLarge),
                 icon: Icon(LineIcons.shield),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/order');
+                },
               ),
               Container(
                 height: 50.0,
