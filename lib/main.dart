@@ -16,6 +16,7 @@ import 'package:shopkhanhtra/home/main_screen.dart';
 import 'package:shopkhanhtra/movies/main.dart';
 import 'package:shopkhanhtra/showCard/home_page.dart';
 import 'package:shopkhanhtra/showCard/show_card.dart';
+import 'package:shopkhanhtra/tiktok/screens/home.dart';
 import 'package:shopkhanhtra/ui/cook_details_page.dart';
 import 'package:shopkhanhtra/ui/list_recommen.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: themeColor,
       ),
-      initialRoute: '/movies',
+      initialRoute: '/tiktok',
       onGenerateRoute: (RouteSettings settings) {
         print('DEVK route for ${settings.name}');
         var routes = <String, WidgetBuilder>{
@@ -58,7 +59,8 @@ class MyApp extends StatelessWidget {
           '/details': (ctx) => FruitAppFruitDetails(fruit: settings.arguments),
           '/order': (ctx) => OrderHistoryPage(),
           '/home_page_food': (ctx) => HomePageFood(),
-          '/movies': (ctx) => MyAppMovies()
+          '/movies': (ctx) => MyAppMovies(),
+          '/tiktok': (ctx) => HomePageTiktok()
         };
         WidgetBuilder builder = routes[settings.name];
         return MaterialPageRoute(builder: (ctx) => builder(ctx));

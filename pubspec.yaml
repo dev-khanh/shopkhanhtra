@@ -35,6 +35,13 @@ dependencies:
   flutter_rating_bar: ^1.1.1
   rxdart: ^0.21.0
 
+#  tikotok
+  http: ^0.12.0+4
+  avatar_glow: any
+  getflutter: ^1.0.11
+  flutter_money_formatter: ^0.8.3
+  video_player: ^0.10.8+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
