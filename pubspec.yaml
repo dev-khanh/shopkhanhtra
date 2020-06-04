@@ -31,6 +31,17 @@ dependencies:
   flutter_advanced_networkimage: ^0.7.0
   line_icons: ^0.2.0
 
+  carousel_pro: ^1.0.0
+  flutter_rating_bar: ^1.1.1
+  rxdart: ^0.21.0
+
+#  tikotok
+  http: ^0.12.0+4
+  avatar_glow: any
+  getflutter: ^1.0.11
+  flutter_money_formatter: ^0.8.3
+  video_player: ^0.10.8+1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -39,3 +50,7 @@ flutter:
   assets:
     - images/
     - assets/images/
+    - assets/images/menus/
+    - assets/images/topmenu/
+    - assets/images/popular_foods/
+    - assets/images/bestfood/
